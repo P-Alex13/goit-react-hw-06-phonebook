@@ -1,16 +1,19 @@
+import { ContactForm, ContactList, Filter, Section } from '../components';
+import { AppStyled, Main } from './App.styled';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <AppStyled>
+      <Main>
+        <Section title="Phonebook">
+          <ContactForm />
+        </Section>
+
+        <Section title="Contacts">
+          <Filter />
+          <ContactList />
+        </Section>
+      </Main>
+    </AppStyled>
   );
 };
